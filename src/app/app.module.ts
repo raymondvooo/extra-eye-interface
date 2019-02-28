@@ -10,10 +10,12 @@ import { CameraComponent } from './camera/camera.component';
 import { routes } from './app.router'
 
 import { CameraDataService } from './camera-data.service';
+import { MapComponent } from './map/map.component';
 @NgModule({
   declarations: [
     AppComponent,
-    CameraComponent
+    CameraComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,

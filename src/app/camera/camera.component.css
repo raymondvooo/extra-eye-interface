@@ -1,11 +1,21 @@
 .sidebar {
     line-height: 1rem;
-    max-width: 13rem;
-    min-width: 9rem;
-    height: 100%;
-    width: 18%;
+    /* max-width: 100rem;
+    min-width: 9rem; */
+    
+    height: 175px;
+    width: 100%;
     border-right: 1px solid #ccc;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-color: #c4cac4;
 }
+form {
+    width: 10%;
+    padding: 10px;
+}
+.pic {
+    vertical-align: top;
+    padding: 10px;
+}
+
