@@ -1,0 +1,11 @@
+.sidebar {
+    line-height: 1rem;
+    max-width: 13rem;
+    min-width: 9rem;
+    height: 100%;
+    width: 18%;
+    border-right: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    background-color: #c4cac4;
+}

@@ -1,0 +1,28 @@
+<div class="content-container"> 
+  <nav class="sidebar">
+      <form [formGroup]="imageForm" class="form">
+          <div class="form-group">
+            <label for="url">Input Image</label>
+            <input type="text" 
+                   class="form-control" 
+                   id="url" 
+                   required 
+                   name="url"
+                   formControlName="imageURL">
+          </div>
+          <div>
+            <label for="cameraNumber">Camera Number</label>
+            <select class="form-control" 
+                    id="cameraNumber" 
+                    formControlName="selectedCam"
+                    required>
+              <option *ngFor="let cam of camNum" [value]="cam">{{cam}}</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-success" (click)="onSubmit()">Submit</button>
+        </form>
+        <img width="300" alt="Angular Logo" src={{camService.camData.imageURL}}>
+
+  </nav>
+
+</div>
