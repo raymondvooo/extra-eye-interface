@@ -52,6 +52,7 @@ export class CameraComponent implements OnInit {
     }
     this.camService.camData.imageURL = this.imageForm.controls.imageURL.value;
     this.camService.camData.selectedCam = selectedCam;
+    this.camService.change(selectedCam.location);
     console.log(selectedCam)
   }
 }

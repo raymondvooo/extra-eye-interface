@@ -1,4 +1,7 @@
 import { Component, OnInit, ViewChild, Input, ElementRef } from '@angular/core';
+import { CameraDataService } from '../camera-data.service';
+import { Subscription } from 'rxjs';
+
 
 declare var H: any;
 
@@ -15,8 +18,15 @@ export class MapComponent implements OnInit {
 
   private platform: any;
   private map: any;
+  location: any = {};
+  subscription: Subscription;
 
-  public constructor() { }
+  public constructor(private camService: CameraDataService) {
+    this.subscription = camService.camera.subscribe((value) => { 
+      this.location = value; 
+      console.log("LOCATION", this.location)
+    });
+   }
 
   public ngOnInit() {
     this.platform = new H.service.Platform({
