@@ -25,6 +25,7 @@ export class MapComponent implements OnInit {
     this.subscription = camService.camera.subscribe((value) => { 
       this.location = value; 
       console.log("LOCATION", this.location)
+      this.map.setCenter(this.location)
     });
    }
 

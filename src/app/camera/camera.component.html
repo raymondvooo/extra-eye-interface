@@ -20,11 +20,11 @@
           </div>
           <button type="submit" class="btn btn-success" (click)="onSubmit()">Submit</button>
         </form>
-        <div class="pic">
+        <div *ngIf="displayData === true"class="pic">
           Image:
         <img height="100%"  src={{camService.camData.imageURL}} style="border-radius: 8px">
         </div>
-        <div class="pic">
+        <div *ngIf="displayData === true" class="pic">
           Location:<br/>
           Lat:{{camService.camData.selectedCam.location.lat}}<br/>
           Long: {{camService.camData.selectedCam.location.lng}}

@@ -13,7 +13,7 @@ interface Camera {
 })
 export class CameraComponent implements OnInit {
   imageURL: "";
-  camNum = [1, 2, 3, 4];
+  camNum = [1, 2, 3];
   cam1: Camera = {
     id: 1,
     location: { lat: 37.7397, lng: -121.4252 }
@@ -33,6 +33,7 @@ export class CameraComponent implements OnInit {
     imageURL: new FormControl(),
     selectedCam: new FormControl()
   })
+  displayData: boolean = false;
 
 
   constructor(private camService: CameraDataService) { 
@@ -53,6 +54,7 @@ export class CameraComponent implements OnInit {
     this.camService.camData.imageURL = this.imageForm.controls.imageURL.value;
     this.camService.camData.selectedCam = selectedCam;
     this.camService.change(selectedCam.location);
+    this.displayData = true;
     console.log(selectedCam)
   }
 }
