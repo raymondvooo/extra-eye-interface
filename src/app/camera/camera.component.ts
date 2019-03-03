@@ -20,7 +20,7 @@ export class CameraComponent implements OnInit {
   }
   cam2: Camera = {
     id: 2,
-    location: { lat: 37.1397, lng: -121.2252 }
+    location: { lat: 37.7997, lng: -121.3252 }
   } 
   cam3: Camera = {
     id: 3,
